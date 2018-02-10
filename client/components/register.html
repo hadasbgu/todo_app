@@ -1,19 +1,20 @@
 <div id="loginForm">
-<form class="register-form" name="myForm">
+<form class="register-form col-md-12 text-center " name="myForm" style="margin-top:80px">
+
+	<h3> Register </h3>
+	<div class="input">
+		<input class="space4" type="text" ng-model="username" placeholder="User Name" required>
+	</div>
+	<div class="input">
+		<input class="space4" type="email" ng-model="email" placeholder="Email" required>
+	</div>
+	<div class="input">
+		<input class="space4" type="password" ng-model="password" placeholder="Password" required>
+	</div>
 
 	<div class="input">
-		<input type="text" ng-model="username" placeholder="User Name" required>
-	</div>
-	<div class="input">
-		<input type="email" ng-model="email" placeholder="Email" required>
-	</div>
-	<div class="input">
-		<input type="password" ng-model="password" placeholder="Password" required>
-	</div>
-
-	<div class="input">
-		<button ng-click="register()" ng-disabled="myForm.$invalid">Register</button>
-		<button ng-click="goToIndex()">Back</button>
+		<button class="btn btn-primary space4" ng-click="register()" ng-disabled="myForm.$invalid">Register</button>
+		<button class="btn btn-primary space4" ng-click="goToIndex()">Back</button>
 	</div>
 
 	response : {{response}}

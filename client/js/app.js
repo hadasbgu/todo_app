@@ -264,4 +264,12 @@ todoApp.controller('tasksCtrl', function($scope, $location, $http){
 	$scope.register = function(){
 		$location.path('/register');
 	};
+
+
+$scope.shoudShowCheck = function(ischeck){
+	if (ischeck) return true;
+		else return false;
+}
+
+
 });

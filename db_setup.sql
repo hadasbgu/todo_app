@@ -33,10 +33,10 @@ insert into taskstable
 values (UNIX_TIMESTAMP(NOW()),"to call mom","admin@gmail.com",false);
 
 insert into taskstable
-values (current_timestamp,"write papter","admin@gmail.com",false);
+values (UNIX_TIMESTAMP(NOW()),"write papter","admin@gmail.com",false);
 
 insert into taskstable
-values (current_timestamp,"paint chair","admin@gmail.com",false);
+values (UNIX_TIMESTAMP(NOW()),"paint chair","admin@gmail.com",false);
 
 
 DELETE FROM taskstable

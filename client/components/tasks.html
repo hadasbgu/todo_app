@@ -8,11 +8,12 @@
 		<div class="panel panel-warning">
 			<div class="panel-heading">
 				{{t.item}} 
-				<button class="btn btn-danger" ng-click="removeTask(t.instanceTime,t.email)" style="margin-left: 80px;"> delete </button>
+				<button class="btn btn-danger btn-xs pull-right" ng-click="removeTask(t.instanceTime,t.email)"> delete </button>
 			</div>
 		    <div class="panel-body">
 				<bold>{{t.instanceTime * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</bold>
-	            <bold>isCheck? {{t.ischeck}}</bold>
+	             <!-- <span ng-show="!shoudShowCheck(t.ischeck)" class="glyphicon glyphicon-edit pull-right"></span></bold> -->
+	             <span ng-show="shoudShowCheck(t.ischeck)" class="glyphicon glyphicon-check pull-right"></span></bold>
 		    </div>
 		</div>
 	</div>
@@ -20,19 +21,18 @@
 
 
 
+	<h4  class="col-md-12 "> insert new task: </h4>
 
-<h4  class="col-md-12 "> insert new task: </h4>
+	<form class="register-form col-md-12" name="myForm">
+		<div class="input">
+			<input type="text" ng-model="item" placeholder="Describe Task" required>
+		</div>
+		<div class="input">
+			 <input type="checkbox" name="status" ng-model="status"> is task complete?
+		</div>
 
-<form class="register-form col-md-12" name="myForm">
 	<div class="input">
-		<input type="text" ng-model="item" placeholder="Describe Task" required>
+			<button ng-click="addTask()" ng-disabled="myForm.$invalid">Add Task</button>
 	</div>
-	<div class="input">
-		 <input type="checkbox" name="status" ng-model="status"> is task complete?
-	</div>
-
-<div class="input">
-		<button ng-click="addTask()" ng-disabled="myForm.$invalid">Add Task</button>
-</div>
 
 </form>
