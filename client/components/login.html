@@ -1,0 +1,21 @@
+<div id="loginForm">
+	
+<form class="login-form" name="myForm">
+
+	<div class="input">
+		<input type="email" ng-model="useremail" placeholder="User Name" required>
+	</div>
+	<div class="input">
+		<input type="password" ng-model="password" placeholder="Password" required>
+	</div>
+
+	<div class="input">
+		<button ng-click="login()" ng-disabled="myForm.$invalid">Login</button>
+	<button ng-click="goToIndex()">Back</button>
+	</div>
+
+
+	response : {{response}}
+
+</form>
+</div>

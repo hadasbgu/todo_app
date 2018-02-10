@@ -1,0 +1,32 @@
+<div id="task">
+	<h1> My TODO List <h1>
+	<h3> Hello, {{data.nickname}}, these are your tasks </span></h3> 
+
+	<div class="col-sm-12 panel-group"  ng-repeat="t in tasks">
+	<div class="panel panel-default">
+        <h4 class="panel-title">
+          	<p class="text-info">
+	          	<bold>{{t.instanceTime}}</bold>
+	          	<bold>{{t.item}}</bold>
+	            <bold>isCheck? {{t.ischeck}}</bold>
+          	<button class="btn alert" ng-click="removeTask(t.instanceTime,t.email)"> delete </button>
+        	</p>
+        </h4>
+	</div>
+</div>
+
+<h4> insert new task: </h4>
+
+<form class="register-form" name="myForm">
+	<div class="input">
+		<input type="text" ng-model="item" placeholder="Describe Task" required>
+	</div>
+	<div class="input">
+		 <input type="checkbox" name="status" ng-model="status"> is task complete?
+	</div>
+
+<div class="input">
+		<button ng-click="addTask()" ng-disabled="myForm.$invalid">Add Task</button>
+</div>
+
+</form>
