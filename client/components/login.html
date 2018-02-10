@@ -1,21 +1,21 @@
 <div id="loginForm">
 	
-<form class="login-form" name="myForm">
+<form class="login-form col-md-12 text-center " name="myForm" style="margin-top:80px">
 
+	<h3> Login </h3>
 	<div class="input">
-		<input type="email" ng-model="useremail" placeholder="User Name" required>
+		<input class="space4" type="email" ng-model="useremail" placeholder="User Name" required>
 	</div>
 	<div class="input">
-		<input type="password" ng-model="password" placeholder="Password" required>
+		<input class="space4" type="password" ng-model="password" placeholder="Password" required>
 	</div>
 
 	<div class="input">
-		<button ng-click="login()" ng-disabled="myForm.$invalid">Login</button>
-	<button ng-click="goToIndex()">Back</button>
+		<button class="btn btn-primary space4" ng-click="login()" ng-disabled="myForm.$invalid">Login</button>
+		<button class="btn btn-primary space4" ng-click="goToIndex()">Back</button>
 	</div>
 
-
-	response : {{response}}
+	<div class="space4">response : {{response}}</div>
 
 </form>
 </div>
